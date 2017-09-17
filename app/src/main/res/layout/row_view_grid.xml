@@ -1,0 +1,45 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    android:layout_marginBottom="16dp">
+
+    <RelativeLayout
+        android:id="@+id/installer_backup_list_row_rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/activatedBackgroundIndicator">
+
+        <ImageView
+            android:id="@+id/installer_backup_appicon"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/action_settings"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/installer_backup_appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Appname"
+            android:gravity="center"
+            android:layout_below="@+id/installer_backup_appicon"
+            android:paddingTop="8dp"/>
+
+        <TextView
+            android:id="@+id/installer_backup_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="version"
+            android:gravity="center"
+            android:layout_below="@+id/installer_backup_appname"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

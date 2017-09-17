@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffa726"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <com.github.lzyzsd.circleprogress.ArcProgress
+        android:id="@+id/arc_progress"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffa726"
+        android:padding="5dp"
+        custom:arc_bottom_text="MEMORY"
+        custom:arc_progress="55" />
+
+    <TextView
+        android:id="@+id/progress_operation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/stop_button_shape"
+        android:text="@string/stop" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.gms.ads.NativeExpressAdView
+                android:id="@+id/nativeAdViewInstaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="350x250"
+                ads:adUnitId="@string/ads_native_backup_unit_id" />
+
+            <TextView
+                android:id="@+id/not_installed_backedup_apps_list_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:visibility="gone" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/not_installed_backedup_apps_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
